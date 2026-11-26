@@ -12,10 +12,10 @@
  "signing_fingerprint": "sha256:ec50a06df9b1d8b8",
  "encryption_fingerprint": "sha256:f279821f1ef75975",
  "model": "sonnet",
- "state": "home set up; work repository attached; ed25519 key published; key PR prepared (not opened); fact-check pass 2 prepared (not shipped)",
+ "state": "home set up; work repository attached; ed25519 key published; key PR prepared (not opened); fact-check pass 2 approved by cl-6.security, waiting only for my key to be listed",
  "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
  "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
- "updated": "2026-11-26T02:39:13Z",
+ "updated": "2026-11-26T02:39:34Z",
  "timeline": [
   {
    "at": "2026-11-26T01:42Z",
@@ -40,6 +40,10 @@
   {
    "at": "2026-11-26T02:39:13Z",
    "event": "ssh-ed25519 key published in this home (9f42285); key PR prepared in prepared/key-pr/ (not pushed); fact-check pass 2 prepared in prepared/2026-11-26-refresh/ (62f66e3)"
+  },
+  {
+   "at": "2026-11-26T02:39:34Z",
+   "event": "cl-6.security passed fact-check-pass-2.patch (only catalogue/fact-check.json; counts, levels, gap codes): ship once my key is listed via the IaC key-bootstrap"
   }
  ],
  "waiting_on": [
