@@ -1,0 +1,451 @@
+diff --git a/catalogue/fact-check.json b/catalogue/fact-check.json
+index fdd7f2b..0a03336 100644
+--- a/catalogue/fact-check.json
++++ b/catalogue/fact-check.json
+@@ -2,9 +2,9 @@
+  "about": "The library's fact-checker, first pass: for every published PrompTugal.news article (those the site has withdrawn are skipped and listed), how far its claims are mapped to sources (provenance), and the gaps. Read from the site's own repository; counts and levels only. A gap is not a finding that a claim is wrong: it says the claim cannot yet be walked back to a recorded source.",
+  "site": "promptugal.news",
+  "pass": 1,
+- "made": "2026-11-18",
++ "made": "2026-11-26",
+  "made_by": "library.b@PrompTugal.dinis (scripts/fact-check.mjs)",
+- "read_from": "PrompTugal__News__Website, dev 599f34e",
++ "read_from": "PrompTugal__News__Website, dev 1c3558c",
+  "levels": {
+   "claims": "every claim mapped to a recorded source (a page with its address and the date it was read)",
+   "story": "sources recorded for the story as a whole, not claim by claim",
+@@ -24,15 +24,15 @@
+   "who-builds-the-parts-of-an-ai-agent"
+  ],
+  "counts": {
+-  "articles": 87,
++  "articles": 102,
+   "withdrawn_skipped": 10,
+-  "claims": 13,
+-  "story": 39,
+-  "links": 35,
++  "claims": 16,
++  "story": 44,
++  "links": 42,
+   "none": 0,
+-  "claims_total": 224,
+-  "claims_resolved": 224,
+-  "claims_on_websummit": 0
++  "claims_total": 288,
++  "claims_resolved": 278,
++  "claims_on_websummit": 4
+  },
+  "articles": [
+   {
+@@ -69,6 +69,23 @@
+     "sources named for the story, not claim by claim"
+    ]
+   },
++  {
++   "slug": "ai-literacy-bias-data-small-firms-ai-act",
++   "title": "AI literacy, bias data and small firms: the AI Act changes",
++   "url": "https://promptugal.news/articles/ai-literacy-bias-data-small-firms-ai-act.html",
++   "published": "2026-11-21",
++   "story": "S79",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 2,
++   "links": 4,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
+   {
+    "slug": "ai-physiotherapy-portugal-health-service",
+    "title": "AI physiotherapy in Portugal's health service: what the government says",
+@@ -80,12 +97,29 @@
+    "claims_resolved": 0,
+    "claims_on_websummit": 0,
+    "story_sources": 1,
+-   "links": 5,
++   "links": 7,
+    "sources_section": false,
+    "gaps": [
+     "sources named for the story, not claim by claim"
+    ]
+   },
++  {
++   "slug": "ai-use-in-portugal-2026",
++   "title": "AI use in Portugal jumps in 2026, for people and companies",
++   "url": "https://promptugal.news/articles/ai-use-in-portugal-2026.html",
++   "published": "2026-11-23",
++   "story": "A1",
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 5,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
+   {
+    "slug": "alcoutim-ai-path-runs-through-the-guadiana",
+    "title": "Alcoutim has no AI company, but the road is being built",
+@@ -331,6 +365,40 @@
+     "sources named for the story, not claim by claim"
+    ]
+   },
++  {
++   "slug": "cocus-vila-nova-de-gaia-tech-hubs",
++   "title": "COCUS sells Porto-region engineering hubs to firms setting up in Portugal",
++   "url": "https://promptugal.news/articles/cocus-vila-nova-de-gaia-tech-hubs.html",
++   "published": "2026-11-26",
++   "story": null,
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 1,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
++  {
++   "slug": "crewai-trust-starts-with-human-review",
++   "title": "How CrewAI says teams earn trust: start with full human review",
++   "url": "https://promptugal.news/articles/crewai-trust-starts-with-human-review.html",
++   "published": "2026-11-23",
++   "story": "S80",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 1,
++   "links": 3,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
+   {
+    "slug": "daily-newsletter",
+    "title": "Two editions a day: PrompTugal.news starts a daily newsletter",
+@@ -448,6 +516,23 @@
+     "sources named for the story, not claim by claim"
+    ]
+   },
++  {
++   "slug": "europe-startup-funding-81-billion-atomico",
++   "title": "Europe's startups on course for 81 billion dollars, says Atomico",
++   "url": "https://promptugal.news/articles/europe-startup-funding-81-billion-atomico.html",
++   "published": "2026-11-26",
++   "story": null,
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 1,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
+   {
+    "slug": "faro-ai-gathers-around-the-university",
+    "title": "In Faro, the AI gathers around the university",
+@@ -465,6 +550,23 @@
+     "sources listed in the article's Sources section, not recorded as data with read dates"
+    ]
+   },
++  {
++   "slug": "five-coding-agents-reverts-security-waits",
++   "title": "A study of five coding agents: reverts, security and review waits",
++   "url": "https://promptugal.news/articles/five-coding-agents-reverts-security-waits.html",
++   "published": "2026-11-24",
++   "story": "S83",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 1,
++   "links": 6,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
+   {
+    "slug": "from-pitch-to-new-markets",
+    "title": "From the PITCH stage to new markets: Portuguese startups raising",
+@@ -548,6 +650,23 @@
+     "sources named for the story, not claim by claim"
+    ]
+   },
++  {
++   "slug": "health-service-pays-remote-physiotherapy",
++   "title": "What the health service pays for remote physiotherapy at home",
++   "url": "https://promptugal.news/articles/health-service-pays-remote-physiotherapy.html",
++   "published": "2026-11-19",
++   "story": "S75",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 3,
++   "links": 5,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
+   {
+    "slug": "how-agents-avoid-collisions",
+    "title": "Many agents, one newsroom: how they avoid collisions",
+@@ -582,6 +701,23 @@
+     "sources as links in the text only, not recorded with a read date"
+    ]
+   },
++  {
++   "slug": "how-the-eu-simplified-the-ai-act",
++   "title": "How the EU simplified the AI Act: what changed and when",
++   "url": "https://promptugal.news/articles/how-the-eu-simplified-the-ai-act.html",
++   "published": "2026-11-20",
++   "story": "S77",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 2,
++   "links": 5,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
+   {
+    "slug": "humanos-road-2-web-summit-winner",
+    "title": "Humanos wins Road 2 Web Summit's top prize, 15,000 euros",
+@@ -634,22 +770,37 @@
+    ]
+   },
+   {
+-   "slug": "italy-and-portugal-in-beato",
+-   "title": "Italy and Portugal meet in Beato on how European tech scales",
+-   "url": "https://promptugal.news/articles/italy-and-portugal-in-beato.html",
+-   "published": "2026-11-06",
+-   "story": "S11",
++   "slug": "intercom-ai-approves-code-changes",
++   "title": "How Intercom lets AI approve code, and keeps people accountable",
++   "url": "https://promptugal.news/articles/intercom-ai-approves-code-changes.html",
++   "published": "2026-11-23",
++   "story": "S81",
+    "level": "story",
+    "claims": 0,
+    "claims_resolved": 0,
+    "claims_on_websummit": 0,
+    "story_sources": 1,
+-   "links": 4,
++   "links": 3,
+    "sources_section": false,
+    "gaps": [
+     "sources named for the story, not claim by claim"
+    ]
+   },
++  {
++   "slug": "italy-and-portugal-in-beato",
++   "title": "Italy and Portugal meet in Beato on how European tech scales",
++   "url": "https://promptugal.news/articles/italy-and-portugal-in-beato.html",
++   "published": "2026-11-06",
++   "story": "S11",
++   "level": "claims",
++   "claims": 19,
++   "claims_resolved": 19,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 5,
++   "sources_section": false,
++   "gaps": []
++  },
+   {
+    "slug": "know-the-reach-ai-music-video",
+    "title": "Know the Reach: an Algarve musician's AI music video",
+@@ -937,6 +1088,40 @@
+     "sources as links in the text only, not recorded with a read date"
+    ]
+   },
++  {
++   "slug": "portugal-tech-investment-top-10-atomico-estimate",
++   "title": "Portugal's tech investment is set to enter Europe's top ten",
++   "url": "https://promptugal.news/articles/portugal-tech-investment-top-10-atomico-estimate.html",
++   "published": "2026-11-26",
++   "story": null,
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 2,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
++  {
++   "slug": "priberam-kenya-broadcasters-ai-media-webinar",
++   "title": "Priberam and Kenya's broadcasters hold a webinar on AI in media",
++   "url": "https://promptugal.news/articles/priberam-kenya-broadcasters-ai-media-webinar.html",
++   "published": "2026-11-26",
++   "story": null,
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 1,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
+   {
+    "slug": "promptugal-news-local-news-town-by-town",
+    "title": "PrompTugal.news goes local: an AI agent for every Algarve town",
+@@ -954,6 +1139,23 @@
+     "sources listed in the article's Sources section, not recorded as data with read dates"
+    ]
+   },
++  {
++   "slug": "reach-ai-lisbon-brands-in-ai-answers",
++   "title": "Lisbon's Reach AI helps brands appear in AI answers",
++   "url": "https://promptugal.news/articles/reach-ai-lisbon-brands-in-ai-answers.html",
++   "published": "2026-11-26",
++   "story": null,
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 1,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
+   {
+    "slug": "red-wind-warning-lisbon-wednesday",
+    "title": "Web Summit calls off Wednesday on the government's advice",
+@@ -1007,15 +1209,16 @@
+    "url": "https://promptugal.news/articles/road-2-web-summit-2026.html",
+    "published": "2026-11-06",
+    "story": "S3",
+-   "level": "story",
+-   "claims": 0,
+-   "claims_resolved": 0,
+-   "claims_on_websummit": 0,
+-   "story_sources": 2,
+-   "links": 7,
++   "level": "claims",
++   "claims": 20,
++   "claims_resolved": 10,
++   "claims_on_websummit": 2,
++   "story_sources": 0,
++   "links": 6,
+    "sources_section": false,
+    "gaps": [
+-    "sources named for the story, not claim by claim"
++    "2 claim(s) resting on websummit.com pages (the house rule of 11 November: what rests only on websummit.com comes off unless another source is cited)",
++    "10 claim(s) whose source is not a recorded page with a read date"
+    ]
+   },
+   {
+@@ -1052,6 +1255,23 @@
+     "sources listed in the article's Sources section, not recorded as data with read dates"
+    ]
+   },
++  {
++   "slug": "smartex-porto-ai-fabric-checks-fadell-chair",
++   "title": "Porto's Smartex names Tony Fadell chair and launches fabric checks",
++   "url": "https://promptugal.news/articles/smartex-porto-ai-fabric-checks-fadell-chair.html",
++   "published": "2026-11-26",
++   "story": null,
++   "level": "links",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 0,
++   "links": 2,
++   "sources_section": false,
++   "gaps": [
++    "sources as links in the text only, not recorded with a read date"
++   ]
++  },
+   {
+    "slug": "speed-where-its-safe-control-where-it-matters",
+    "title": "Speed where it's safe, control where it matters",
+@@ -1069,6 +1289,40 @@
+     "sources as links in the text only, not recorded with a read date"
+    ]
+   },
++  {
++   "slug": "spotify-ai-change-outran-checks",
++   "title": "Spotify says AI made change outrun its checks",
++   "url": "https://promptugal.news/articles/spotify-ai-change-outran-checks.html",
++   "published": "2026-11-23",
++   "story": "S82",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 1,
++   "links": 3,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
++  {
++   "slug": "superhuman-to-buy-rows-porto",
++   "title": "Superhuman agreed to buy Rows, the AI spreadsheet company from Porto",
++   "url": "https://promptugal.news/articles/superhuman-to-buy-rows-porto.html",
++   "published": "2026-11-19",
++   "story": "S73",
++   "level": "story",
++   "claims": 0,
++   "claims_resolved": 0,
++   "claims_on_websummit": 0,
++   "story_sources": 2,
++   "links": 4,
++   "sources_section": false,
++   "gaps": [
++    "sources named for the story, not claim by claim"
++   ]
++  },
+   {
+    "slug": "teamworks-coaches-agent",
+    "title": "What failed first as Teamworks builds an AI assistant for coaches",
+@@ -1307,15 +1561,15 @@
+    "url": "https://promptugal.news/articles/wednesday-11-november-going-abroad.html",
+    "published": "2026-11-06",
+    "story": "S17",
+-   "level": "story",
+-   "claims": 0,
+-   "claims_resolved": 0,
+-   "claims_on_websummit": 0,
+-   "story_sources": 5,
++   "level": "claims",
++   "claims": 25,
++   "claims_resolved": 25,
++   "claims_on_websummit": 2,
++   "story_sources": 0,
+    "links": 5,
+    "sources_section": false,
+    "gaps": [
+-    "sources named for the story, not claim by claim"
++    "2 claim(s) resting on websummit.com pages (the house rule of 11 November: what rests only on websummit.com comes off unless another source is cited)"
+    ]
+   },
+   {
