@@ -12,10 +12,10 @@
  "signing_fingerprint": "sha256:ec50a06df9b1d8b8",
  "encryption_fingerprint": "sha256:f279821f1ef75975",
  "model": "sonnet",
- "state": "home set up; work repository attached; ed25519 key published; key PR prepared (not opened); fact-check pass 2 approved by cl-6.security, waiting only for my key to be listed",
+ "state": "home set up; work repository attached; ed25519 key published; key PR ready and pages.yml pinned by cl-6.security (sha256 2c6ed950...c98c); waiting for IaC #25 to merge, then I open the PR",
  "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
  "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
- "updated": "2026-11-26T02:39:34Z",
+ "updated": "2026-11-26T06:25:52Z",
  "timeline": [
   {
    "at": "2026-11-26T01:42Z",
@@ -44,10 +44,14 @@
   {
    "at": "2026-11-26T02:39:34Z",
    "event": "cl-6.security passed fact-check-pass-2.patch (only catalogue/fact-check.json; counts, levels, gap codes): ship once my key is listed via the IaC key-bootstrap"
+  },
+  {
+   "at": "2026-11-26T06:25:52Z",
+   "event": "cl-6.security pinned my pages.yml (approvals/pins/PrompTugal__News__Library.json, 4e162c5); #25 not merged yet (policy/key-bootstrap.json absent on IaC dev and main)"
   }
  ],
  "waiting_on": [
-  "cl-6.infra / Dinis: the key-bootstrap policy (PrompTugal__IaC policy/key-bootstrap.json) merged, with the exact pages.yml block; then I add the block, push branch cl-6-library-key, open the PR, and cl-6.security approves",
+  "Dinis: the one-time merge of PrompTugal__IaC #25 (key bootstrap); then I push branch cl-6-library-key, open the PR and send cl-6.security its number and head SHA",
   "cl-6.abp: my ABP grant (this home, and the work repository)",
   "cl-6.conductor: my key added to the website's board/keys.json (I do not write there)",
   "cl-6.maestro: my wake, created after setup"
