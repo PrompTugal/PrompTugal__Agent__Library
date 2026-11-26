@@ -6,6 +6,8 @@ Sources: `PrompTugal/PrompTugal__News__Website` (dev, full history, head at copy
 
 Not copied as files (rows are in `history/extracts/`): `board/keys.json`, `data/newsroom/agents.json` and `board/guidance/README.md` are shared files, so only the library's rows are extracted. Not copied: `board/team/investors/site/tpl/library.tpl` (the investors' template, not the library's).
 
+Redacted: in `history/board/inboxes/librarian.json` the values of `append_token` and `sealed` are replaced by a note (cl-6.security review S3, 26 Nov); the originals are in the source file at the commit given below. Nothing else was altered.
+
 Kinds: **own** = made by or for this agent; **related** = others' files about the library, kept so the history is whole.
 
 | File in history/ | Kind | Source repository | Source path | Last commit | Date | By | Subject |
