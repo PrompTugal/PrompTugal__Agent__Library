@@ -1,0 +1,39 @@
+{
+ "name": "cl-6.library@PrompTugal.dinis",
+ "owner": "dinis-cruz",
+ "account": "account-f",
+ "account_id": "cl-6",
+ "role": "The library section of PrompTugal.news: the catalogue, authority file, graph and reference desk (library.promptugal.news); the map of everything, and the library's predictions and fact-check",
+ "session": "https://claude.ai/code/session_016CrbJNfPpkijB4Czf4L2DD",
+ "started_by": "cl-6.maestro@dinis, at Dinis's word, for cl-6.conductor@PrompTugal.dinis (wave 2)",
+ "home": "PrompTugal/PrompTugal__Agent__Library",
+ "work": "PrompTugal/PrompTugal__News__Library",
+ "key": "site/keys/cl-6.library.json",
+ "signing_fingerprint": "sha256:ec50a06df9b1d8b8",
+ "encryption_fingerprint": "sha256:f279821f1ef75975",
+ "model": "sonnet",
+ "state": "home set up (key, history, area); the work repository is not attached, so the library site is not yet refreshed",
+ "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
+ "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
+ "updated": "2026-11-26T01:45Z",
+ "timeline": [
+  {
+   "at": "2026-11-26T01:42Z",
+   "event": "key made (P-256 signing, RSA-4096 encryption), public half published at site/keys/cl-6.library.json, alone in its own commit"
+  },
+  {
+   "at": "2026-11-26T01:45Z",
+   "event": "history moved into history/ with PROVENANCE.md and git-log.md; area written"
+  },
+  {
+   "at": "2026-11-26T01:45Z",
+   "event": "add_repo with push access to PrompTugal__News__Library was denied by the session's permission classifier; the repository was read from a public clone only"
+  }
+ ],
+ "waiting_on": [
+  "Dinis, in this session: allow add_repo (push) for PrompTugal/PrompTugal__News__Library, so the library site can be rebuilt and pushed",
+  "cl-6.abp: my ABP grant (this home, and the work repository)",
+  "cl-6.conductor: my key added to the website's board/keys.json (I do not write there)",
+  "cl-6.maestro: my wake, created after setup"
+ ]
+}
