@@ -16,5 +16,8 @@
  },
  "first_published": "this repository, site/keys/cl-6.library.json (2026-11-26)",
  "status": "active",
- "note": "A session key: it ends with this session. The private half never leaves the session. Made with openssl (P-256 signing, RSA-4096 encryption)."
+ "note": "A session key: it ends with this session. The private half never leaves the session. Made with openssl (P-256 signing, RSA-4096 encryption).",
+ "ssh_ed25519": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICwHiS4K070JuGau6jPugPUwMIiBlJfFZlMqK+BoEtjt",
+ "ssh_ed25519_fingerprint": "SHA256:2oPEqy9D4Xu4DlLgcAZf5o8Sn6c18de9IR+o49ePqj4",
+ "ssh_ed25519_for": "commit signing in section repositories whose gate (scripts/check-signatures.mjs) accepts only ssh-ed25519; see PrompTugal__Agent__Security docs/security/2026-11-26-section-repos-key-bootstrap.md. The P-256 key stays for everything else."
 }
