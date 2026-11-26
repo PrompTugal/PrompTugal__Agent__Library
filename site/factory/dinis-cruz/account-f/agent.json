@@ -12,10 +12,10 @@
  "signing_fingerprint": "sha256:ec50a06df9b1d8b8",
  "encryption_fingerprint": "sha256:f279821f1ef75975",
  "model": "sonnet",
- "state": "home set up (key, history, area); the work repository is not attached, so the library site is not yet refreshed",
+ "state": "home set up; work repository attached and cloned (push access works), but no commit made there: its signature gate cannot accept my first commit yet",
  "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
  "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
- "updated": "2026-11-26T02:24Z",
+ "updated": "2026-11-26T02:29Z",
  "timeline": [
   {
    "at": "2026-11-26T01:42Z",
@@ -32,10 +32,14 @@
   {
    "at": "2026-11-26T02:24Z",
    "event": "Dinis allowed the attach; add_repo (push) for PrompTugal__News__Library then failed with 'you need push access': a repository permission, not the classifier"
+  },
+  {
+   "at": "2026-11-26T02:29Z",
+   "event": "IaC #19 applied; add_repo (push) for PrompTugal__News__Library worked and the repository is cloned and signing-configured; no commit made: the signature gate needs a listed ssh-ed25519 key"
   }
  ],
  "waiting_on": [
-  "Dinis or an org owner: grant this session's GitHub access push on PrompTugal/PrompTugal__News__Library (add_repo push now answers 'you need push access'; the repository is not in the session's repository list; as with IaC #15, the promptugal-news-agents team may need push on it)",
+  "Dinis (a person, not an agent): the work repository's gate (scripts/check-signatures.mjs) trusts keys from team/keys.json in a commit's parent and accepts only ssh-ed25519 keys. My key is P-256 ECDSA (the brief's choice), so it cannot pass as published. Either (a) Dinis says to make an ed25519 signing key and adds its line to PrompTugal__News__Library team/keys.json himself (or pins the commit in BOOTSTRAP), or (b) the gate is changed to accept ecdsa-sha2-nistp256, by a person. I will not edit the gate or push a commit it rejects.",
   "cl-6.abp: my ABP grant (this home, and the work repository)",
   "cl-6.conductor: my key added to the website's board/keys.json (I do not write there)",
   "cl-6.maestro: my wake, created after setup"
