@@ -1,0 +1,285 @@
+{
+  "agent": "librarian@PrompTugal.dinis",
+  "focus": "The map of everything: every page, board file, desk, pass, finding, decision and agent, with where it is and who made it (board/catalogue.json, board/catalogue.md); the source for the newsroom's search.",
+  "state": "working (restarted 16 Nov 19:31 UTC on this account, every three hours at :56; also does accountant@'s work)",
+  "updated": "2026-11-16T22:10Z",
+  "done": [
+    "Restart run 1: new session key (librarian-promptugal, sha256:ddf6ca1995a07790), old entry librarian-promptugal-1 superseded 19:32",
+    "Catalogue rebuilt at v0.1.1647 (1,595 pages, 27 agents) and the life map (92 agents, 38 flagged); waits-on-Dinis regenerated",
+    "Desk health: board/team/librarian/desk-health-2026-11-16.md (no placements pointing at nothing; 7 work/ branches stale with about 440 unplaced commits; front page desk 4 days stale; 25 of 56 roles' debriefs older than a day)",
+    "Budgets: restart_2026-11-16 block in board/budgets.json (19 sessions, lines Opus 30, Sonnet 10)",
+    "Hand-over debrief board/team/librarian/debriefs/2026-11-16-handover.md",
+    "Wake of 21:56: catalogue v0.1.1665 (1,816 pages), life map (96 agents), library rebuilt (7,440 cards, check OK, 43 tests); catalogue.mjs taught the translated pages' maker (library warnings 592 to 207); desk health addendum: all 19 restarted sessions keyed, 6 debriefs owed, work/ branches as before"
+  ],
+  "next": [
+    "Next wake 00:56: close the day (debrief), the rest of the library warnings, costs if conductor.b@ supplies them"
+  ],
+  "asks": [
+    "conductor.b@: the restarted sessions' cost figures (no ledger since 12 Nov; get_session gives none)",
+    "researcher@ has filed no status.json since 8 Nov: for conductor.b@ to nudge",
+    "Dinis: nothing blocks me"
+  ],
+  "blocked_on": [
+    "security@: whether board files, desks and passes may be in the jump search by title and path only (its pre-review: the index holds rendered page text only)",
+    "ontologist@: a schema for board/catalogue.json",
+    "dev@: the reading room as a page of the build (/library/), since board/ no longer deploys HTML (SLIP-20261106-010)",
+    "my inbox writes back: the drain cannot mark messages processed without an SG/Send access token (sgit: 'no access token configured'); messages stay pending on the lane, nothing is lost",
+    "conductor@: REALITY.md still disagrees with the repository in 6 places (sent 7 November; library/reality/for-conductor.md re-checks it at every build)",
+    "conductor@ and conductor.b@: 27 agents with an active key and no row in data/newsroom/agents.json; no ROLE.md for conductor@, journalist@, observability@ (sent 7 November)",
+    "conductor@: board/schedule.json stale since 6 November 05:40 (paused agents shown enabled); sent 10 November"
+  ],
+  "wakes": [
+    {
+      "started": "2026-11-06T03:38Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "First run: key, ROLE.md, status, the first catalogue (986 pages, 32 board files, 9 desks, 3 passes, 14 agents), input to the search pass"
+    },
+    {
+      "started": "2026-11-06T03:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: catalogue brought up to date (devops@'s health report, security@'s first run); no 'where is X?' left for me; no new guidance"
+    },
+    {
+      "started": "2026-11-06T06:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: catalogue to v0.1.160 with every pass's findings and decisions (103) and 25 agents; the publication pass's condition on me noted; inbox not drainable here"
+    },
+    {
+      "started": "2026-11-06T09:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: catalogue to v0.1.195; first health scan (10 agents with no row, dev.portugal@ with no key, 3 without ROLE.md); no where-is-X for me; no new guidance"
+    },
+    {
+      "started": "2026-11-06T12:58Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: the ideas ledger in the catalogue (494 ideas, 48 later, 25 not captured, 13 questions, 88 concepts); the jump list for the search; catalogue to v0.1.250; health H7 to H9"
+    },
+    {
+      "started": "2026-11-06T21:28Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Last run of this session: hand-over debrief refreshed; state handed over (role moving to account B)"
+    },
+    {
+      "started": "2026-11-06T22:23Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Account B session's first run: onboarded, new key, conductors told, catalogue v0.1.363, library 3,107 cards green, waits-on-Dinis regenerated"
+    },
+    {
+      "started": "2026-11-07T00:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: inbox read (empty) and rotation asked after printing its credentials in my transcript; reality tree warnings cleared; library check fixed for Angelo's and Silvio's agent handles; catalogue v0.1.395"
+    },
+    {
+      "started": "2026-11-07T03:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: rotated inbox drained (1 notice); Q9 met, README finding to conductor@; catalogue v0.1.430; library 3,454 cards green"
+    },
+    {
+      "started": "2026-11-07T06:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: Q8 done (2 ideas not in the ledger, sent to conductor@); catalogue and library regenerated"
+    },
+    {
+      "started": "2026-11-07T09:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: the library's link types mapped onto the ontology's newsroom world, checked at every build; 'see' asked of ontologist@; catalogue v0.1.497; library 3,610 cards green"
+    },
+    {
+      "started": "2026-11-07T12:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: 'see' retired for supersedes at ontologist@'s word; SLIP-009 closed; catalogue v0.1.538; library 3,732 cards green"
+    },
+    {
+      "started": "2026-11-07T15:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: REALITY.md's 7 gaps re-checked and sent to conductor@; catalogue v0.1.577; library 3,898 cards green"
+    },
+    {
+      "started": "2026-11-07T18:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: every page credited (investors' site taught); agents' stocktake to both conductors; catalogue v0.1.613; library 4,940 cards green"
+    },
+    {
+      "started": "2026-11-07T21:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: keyed agents are handles (José's writer); debrief refreshed; catalogue v0.1.644; library 5,009 cards green"
+    },
+    {
+      "started": "2026-11-09T03:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "First wake of the summit set: handles by operator suffix (risk-mandate@promptugal.ai.dinis); debrief of 9 November; catalogue v0.1.776; library 5,217 cards green"
+    },
+    {
+      "started": "2026-11-09T06:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: the 25 Not captured ideas re-checked (12 captured, 3 partly, 10 still not), to conductor@; catalogue v0.1.800; library 5,292 cards green"
+    },
+    {
+      "started": "2026-11-09T09:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: the 48 Later ideas against their triggers (10 due now; the press pass undecided on its due day), to conductor@ and Dinis's asks; catalogue v0.1.816; library 5,330 cards green"
+    },
+    {
+      "started": "2026-11-09T12:58Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: the agents' life and keys mapped (life.md: 62 agents, 68 keys, 4 flags), to both conductors; catalogue v0.1.842; library 5,385 cards green"
+    },
+    {
+      "started": "2026-11-09T15:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; new guidance read (nothing for the librarian); life map 6 flags; catalogue v0.1.862; library 5,430 cards green"
+    },
+    {
+      "started": "2026-11-09T18:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: life map's flags batched to the conductors; catalogue v0.1.885; library 5,478 cards green"
+    },
+    {
+      "started": "2026-11-09T21:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: debrief refreshed; catalogue v0.1.908; library 5,519 cards green"
+    },
+    {
+      "started": "2026-11-10T06:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "First wake after THE RESTART: life map reads account-b.json; schedule.json stale, to both conductors; debrief of 10 November; catalogue v0.1.961; library 5,618 cards green"
+    },
+    {
+      "started": "2026-11-10T09:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: size cap met by series-level description and slim withdrawn cards (12.07 MB); catalogue v0.1.979; library 5,695 cards green"
+    },
+    {
+      "started": "2026-11-10T12:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: each piece's flow from the record for the visual newsroom (53 pieces, 355 events); one piece unchecked on record; catalogue v0.1.1002; library 5,730 cards green"
+    },
+    {
+      "started": "2026-11-10T15:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: provenance follows story codes (55 pieces); catalogue v0.1.1027; library 5,747 cards green"
+    },
+    {
+      "started": "2026-11-10T19:02Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: DATA.md (a README per data file) and a candidate to accountant@; catalogue v0.1.1058; library 5,800 cards green"
+    },
+    {
+      "started": "2026-11-10T21:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; after a session restart; catalogue v0.1.1085; library 5,834 cards green"
+    },
+    {
+      "started": "2026-11-11T00:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: handles case-insensitive (a false idle flag); debrief of 11 November; catalogue v0.1.1117; library 5,855 cards green"
+    },
+    {
+      "started": "2026-11-11T03:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; catalogue v0.1.1148; library 5,886 cards green"
+    },
+    {
+      "started": "2026-11-11T06:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; catalogue v0.1.1177; library 5,909 cards green"
+    },
+    {
+      "started": "2026-11-11T09:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; catalogue v0.1.1206; library 5,921 cards green"
+    },
+    {
+      "started": "2026-11-11T12:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: flags batched to the conductors; catalogue v0.1.1236; library 5,949 cards green"
+    },
+    {
+      "started": "2026-11-11T15:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: conductor.b@'s correction to the life map taken; catalogue v0.1.1263; library 5,972 cards green"
+    },
+    {
+      "started": "2026-11-11T18:58Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; debrief refreshed; catalogue v0.1.1289; library 5,988 cards green"
+    },
+    {
+      "started": "2026-11-11T21:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; catalogue v0.1.1309; library 6,013 cards green"
+    },
+    {
+      "started": "2026-11-12T00:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; debrief of 12 November; catalogue v0.1.1328; library 6,038 cards green"
+    },
+    {
+      "started": "2026-11-12T03:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: size headroom (four more series; the register's own budget): 11.4 MB of 14; catalogue v0.1.1343; library 6,055 cards green"
+    },
+    {
+      "started": "2026-11-12T06:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: the websummit-only takedown recorded (729 page cards withdrawn, kept); its note page credited; catalogue v0.1.1361; library 6,058 cards green"
+    },
+    {
+      "started": "2026-11-12T09:56Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: light; catalogue v0.1.1379; library 6,065 cards green"
+    },
+    {
+      "started": "2026-11-12T12:57Z",
+      "outcome": "ok",
+      "release": "numbered by CI at push",
+      "line": "Scheduled wake: flags batched (the fringe conductors); catalogue v0.1.1399; library 6,074 cards green"
+    }
+  ],
+  "notes": [
+    "Self-reported for abp@ (R8): while reading board/inboxes/librarian.json this wake I printed its whole record into my session, append_token included. That token is public on purpose (write-only) and already in the repository, so nothing new is exposed, but R8 says never print a token; I now read only named fields of such files.",
+    "For abp@: board/runs/dev.data/2026-11-06T06-33-03Z.json lists dev.data@'s commit 0b8920ae3 ('tree matches dev', on its own branch) as writing board/team/librarian/catalogue.mjs and status.json; on dev only my own commits have touched those files, so it looks like a branch brought level with dev, not a write into my folder."
+  ],
+  "debrief": "board/team/librarian/debriefs/2026-11-16-handover.md",
+  "session": "session_01Kw9UwDA6Bcb7hgYc9kVbZK (account B); notes in board/team/librarian/sessions/session_01Kw9UwDA6Bcb7hgYc9kVbZK/"
+}

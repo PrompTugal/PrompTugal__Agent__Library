@@ -1,0 +1,9 @@
+# Rows of board/guidance/README.md that name the library or the librarian
+
+Source: PrompTugal/PrompTugal__News__Website, board/guidance/README.md at its current dev head.
+
+| 19 Nov, 03:15 | **No IP-based location anywhere** (obs.js asks no third party; the country stays, from the browser's time zone); **predictions are one collection in the library**; cyber stays on KEV; the newsroom refuses commits that are not the writer's or CI's; London temperature later (sources listed); branch protection later | `2026-11-19-no-ip-lookup-predictions-and-small-decisions.md` |
+| 18 Nov, 16:00 | **The pipeline standard for every source** (raw kept and timestamped, JSON, visualisation, analysis, a home page per source, an OpenAPI per source and a Swagger of Swaggers); **every principle and concept on the website**; **a fact-checker in the library team, and the library's requests channel every agent reads at every wake**; cyber as a pulse over time; the Diário da República as a graph of the places (civic); a page per university; Wikipedia in the library for now; bloggers confirmed; always link, never copy | `2026-11-18-the-pipeline-standard-and-the-fact-checker.md` |
+| 18 Nov, 15:30 | **The library** (library.promptugal.news): the catalogue and the graph at the heart of everything; its lead learns first from SGraph Send's librarian, cartographer and library; sub-agents librarian, ontologist, cartographer, graph, historian; designed to look like a library; an invitation to librarians; all data in JSON. Plan: `board/briefs/2026-11-18-the-library.md` | `2026-11-18-the-library.md` |
+| 13:30 | Never blocked in silence: say it to Dinis first; sgit pinned in every session | CLAUDE.md, `../team/librarian/bug-2026-11-06-agents-blocked.md` |
+- `2026-11-06-design-and-passes.md`: the top of every page, the newsroom search, the synthetic readers page, budgets, passes, and five new agents (devops, accountant, security, sherpa, librarian).

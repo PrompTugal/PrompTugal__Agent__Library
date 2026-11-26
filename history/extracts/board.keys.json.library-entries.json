@@ -1,0 +1,82 @@
+{
+ "source": "board/keys.json (PrompTugal/PrompTugal__News__Website)",
+ "note": "the library's entries (public halves only), copied verbatim",
+ "entries": [
+  {
+   "id": "librarian-promptugal-0",
+   "agent": "librarian@PrompTugal.dinis",
+   "label": "librarian@PrompTugal.dinis (Claude Code session)",
+   "role": "The librarian of PrompTugal.news (librarian@PrompTugal.dinis): the map of every page, file, desk, pass, finding, decision and agent, indexed with where it is and who made it (board/catalogue.json); answers \"where is X?\"; feeds the newsroom's search. A session key: it ends with its session.",
+   "how": "Made by the agent in its own session on 6 November 2026 (pki-agent.mjs keygen --session, the copy matching the sha256 pinned in the team site's admin/tools/seal.mjs) and pushed to this repository by that session, at Dinis's word (6 November 2026: PrompTugal's keys live here); the push is the authorisation. Linked locally to the operator's key sha256:db7f79fdd87e030a; not yet submitted to or confirmed on pki.sgit.ai.",
+   "added": "2026-11-06",
+   "bundle": {
+    "v": 1,
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA0zNn2xXnOJKV6PGcbPJX\naVle23Yc7l+gM7wn18juml6J9Xb+NU5ev05KNH9EXUwJHWf5C95k6awEd8SQZLub\nO+1MYkI68HvLHFe8jNm77/aMEdtZbPtjJDY6VgHwr5ausRq9LuGGRqOnote1594K\n215rlfTfBDkhDP+8SClRFaJDrjZtLAlcNm+TrHwddGtLyOLf9hotAFTEWsNfIwAv\nBVw5jhT6mdMj7fOdn093rc/pFc4hXvekYB4+Mr5007R7MEPt8MFENILvq3rye4NJ\nfMOqCC/w3RMQQLdqF0qQNn5wzyJOkGaEpCnoZEOL/rv/U7F66twvqbpw+cLG2s1d\nZkyKbc3tw4QBBy51qwm38iJoI8Cw1aiDOuoUsBdRAuYzfzYy0f63a/y1DXQbjeYJ\nSN4e3bK29SYJpDnwZZpEo9fLT94azlt8g7OwIf2OmU+H2pyh6d76R/tAn7ri4RMJ\n8qssGW0XvI0i9LkHO/xsOiVQ1ayMnmrfOJ+un4Px2SdLsOhFt425RCtth+SB0NBD\nQLT3yKqbu9hXsVqGb3cNiFcaQChVTfTff9yM7mFHAaRcKgHbk6rzJgnKs5bEG3tf\ny8Ox2z+x3TCyaeFIJBQaH4iKFaJBTDh8SHEroAqxRce+4oUA/C18sUB9aCCdpaBf\nWn6SaLJBN/NUZngi/MfpLQ8CAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjvZ0tC7IaBkzvqlF4dnEnUL8iXqK\ntHOgbKZY9Pyqq/pWvLZLdrnRUNPrsVw42a+9Zt3d1qmkwaIncq7vyF1xOw==\n-----END PUBLIC KEY-----\n",
+    "label": "librarian@PrompTugal.dinis",
+    "fingerprint": "sha256:5e0b96eae9b4ede8",
+    "signing_fingerprint": "sha256:43e4a6764c635dfd"
+   },
+   "status": "superseded",
+   "superseded_at": "2026-11-06T22:30Z",
+   "superseded_by": "librarian-promptugal",
+   "superseded_note": "The first librarian session handed over at 21:30 UTC when the role moved to Dinis's second account (board/the-account-move.md); its id moved from librarian-promptugal to librarian-promptugal-0 so the active key keeps the role's id (board/tools/agent_inboxes.py finds a sender by id)."
+  },
+  {
+   "id": "librarian-promptugal-1",
+   "agent": "librarian@PrompTugal.dinis",
+   "label": "librarian@PrompTugal.dinis (Claude Code session, account B)",
+   "role": "The librarian of PrompTugal.news (librarian@PrompTugal.dinis): the map of every page, file, desk, pass, finding, decision and agent, indexed with where it is and who made it (board/catalogue.json); answers \"where is X?\"; feeds the newsroom's search. A session key: it ends with its session.",
+   "how": "Made by the agent in its own session on account B on 6 November 2026 at 22:23 UTC (pki-agent.mjs keygen --session, the copy matching sha256 fcb28a1c...02ab) and pushed to this repository by that session, taking over from librarian-promptugal-0 (CLAUDE.md, 'Handing a role to a new session'; board/the-account-move.md). Not yet linked to the operator's key or submitted to pki.sgit.ai.",
+   "added": "2026-11-06",
+   "bundle": {
+    "v": 1,
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAjNXT/LAz9i5vB5+um2Vk\nRbVbq2jNomJwf8AkNTTRdAxIdhsKFTBp/s17Ng8mZb1OHl/qaFWGCpcIUCXW5xFU\nh9Er4VYUVsgOZ3CZJqoIB81d1tNOF0o1fG/3aAAUC6La1ZbXdcLzo3/cgJxYyQwc\n136tPA+PTSmPAtViPzJgV9GwNYQbaI3tAnEH89dCsIDeE/uaGcKr0hZyZqRgckUi\nqV97QtQkm7HSa6i8Q1gSVYQmlIaoaXhNq/8nJs72qB/wjVfMMXNB+FJKzhShS14I\nS0zIMqaAcHw1PTrk/uK4XmROo4Q1ojQYJWiEOh5Z1NtutXEC66+g7QWqdDdkSqBI\nrQxoGUkgtq0RC/kXX/dsYYS+ghuXOUPP4YKDwc49zbXeiNHn/8awtv0xYvwhF+rk\n6hCyfgxt7PHkapV3Rv7cSdJoovHrBtt6jMBE1Eaakx4XAteJz4Lb8R7D+944BKUi\nA8cvy25cvxSqlKdUz3/kbEXS7vZ8u4Ho7bLbFdSCOhc727+5XpDR6sKgPjIF6tYW\n+MRtFtEdhKByb61gRO7OqMhdP95eoSCGbOkzRdQMOFtTcxd+2WyZzbK2ExoLETPw\nhbijZJij3b/m0H8kuyJnIm3EMtg67C9EZT3u+6aTuid2PihtMnyz+fROt9BB4X4e\ndD0OlSBn//1Lbfr7Zyq7WZkCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEqkS3c5fSJu5bJIDuvXwfnb8MHPBe\nSViLX92k9DJA6VysfSkxgPgMFjxF7e0CyllvKfL7k8OLTKqjQwaaGqa6Kg==\n-----END PUBLIC KEY-----\n",
+    "label": "librarian@PrompTugal.dinis",
+    "fingerprint": "sha256:a1bcc67afa9970d6",
+    "signing_fingerprint": "sha256:b7d903294669247b"
+   },
+   "status": "superseded",
+   "superseded": "2026-11-16T19:32Z",
+   "superseded_by": "librarian-promptugal"
+  },
+  {
+   "id": "librarian-promptugal",
+   "agent": "librarian@PrompTugal.dinis",
+   "label": "librarian@PrompTugal.dinis (Claude Code session, restarted 16 November 2026)",
+   "role": "The librarian of PrompTugal.news (librarian@PrompTugal.dinis): the map of every page, file, desk, pass, finding, decision and agent, indexed with where it is and who made it (board/catalogue.json); answers \"where is X?\"; feeds the newsroom's search. A session key: it ends with its session.",
+   "how": "Made by the agent in its own session (session_01Kw9UwEN53pY1UeTB8yoASM) on 16 November 2026 at 19:32 UTC, when conductor.b@ restarted the team at Dinis's word (pki-agent.mjs keygen --session), taking over from librarian-promptugal-1 (CLAUDE.md, 'Handing a role to a new session'). Not yet linked to the operator's key.",
+   "added": "2026-11-16",
+   "bundle": {
+    "v": 1,
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtU/fBJi5mriMFs1R9hel\nNzmZL6szUOVgtE4QIP5XXzI83hfssFUqx8hnHPsGb3PVp3+ZB3ge/9S96KIWojCv\nYE5gANOX8sF+j0SA80H6Ht0c5rZRnG1pTqiJus3AKYNoTyAFLLYlm6FR2YdKpneT\nulas2O0hhY67Aex1NK7Wc5gTYg/5DNZSSdDitRdxfnONgQpRDvZLJM0DcUSzHd3q\nLaYrMhQd+TfUSF0SY5qC87N9S0OnxJUoFMiLIQQOuUKj1U+X0dLUKGoTLoYRyX7N\nwRArcDbmBjgw9qX0aWKdhvC5yXiy6CkVhTD770dt+bUBqcaGcg+p5OfrnS8K7OJZ\nGhyG/TpaDuoyPnlDgZvRjVoJg9bS52HbneRxis9/xdKZgaps86OEFMjI2SQ2VM3c\nwQC708DHfBWgcCWfcZ+tN7chBewyfyhJNlIt7ZWXbeF+70HTJEBFATwx1ICkTnsq\n9yYK/uuWdgZVi2bEaQpKRoktj9nCYa4hbx2c0yTKX11WsLV+EjVT4huoD28LGU02\nPKqV4uNpXpm4hOX1BQq9colp37rQVD7UkFqBB9uFGpeSrgR/bzCvn9rTbxwy0rTI\nvptBCFK/rX096Dr3AoiO0un2JWoY8x9Qe9RTSvbwSVqUBXViRIcgnvmQW/a3XE48\nWBIkTqCjukfWbVuy3C9g5OMCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEJ3jAfzBTg0j0PBiO5fCTT0NBg97H\nuopVKuUhXVHoav3Z+r+7o3a+h3mawOTpgSJFXkjeNWdKoT6baosKgzniCQ==\n-----END PUBLIC KEY-----\n",
+    "label": "librarian@PrompTugal.dinis",
+    "fingerprint": "sha256:3d3d6c2d4761fb0e",
+    "signing_fingerprint": "sha256:ddf6ca1995a07790"
+   },
+   "status": "active"
+  },
+  {
+   "id": "library.b-promptugal",
+   "agent": "library.b@PrompTugal.dinis",
+   "label": "library.b@PrompTugal.dinis (Claude Code cloud session, account B)",
+   "role": "Lead and librarian-in-chief of library.promptugal.news (PrompTugal/PrompTugal__News__Library). A session key: it ends with its session.",
+   "how": "Made by the agent in its own session on 18 November 2026 with the installed `sgit pki keygen` (sgit-ai v0.27.0), at Dinis's word ('keys in every session'; board/guidance/2026-11-18-keys-issues-rebuilds-observability.md in PrompTugal__News__Website). The other halves stay in the session, outside this repository, locked and never committed or printed. The push of this entry is the authorisation. Not yet linked to an operator's key.",
+   "added": "2026-11-18",
+   "status": "active",
+   "fingerprint": "sha256:78fa318e01745b38",
+   "signing_fingerprint": "sha256:51b1474aae1dc589",
+   "bundle": {
+    "v": 1,
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAmCmbCI3bcmFrA2D7H1jX\ncHpmhJfIcOQDadQ2UlKDS6ORGJz9gwljIRltUakSwrfHoKQeHrotqJ6iCIsebxB/\ncOdo0KTxrLwXFVxLZL7dcdGpxqpdHOuu6ZdcOOZ/S3eSJy4cLBo84yADufTlOgrk\n1iDuX61MLCAW33NmKSxAVj/eWyRS6oj1RQji/9yKclPUHhV3v4G6VV4j9JOkQi95\nUXkdSco1fMD1gaELHnQ81tM+CY6RrEWMuqO0gXfeV6PhvGGRfGq2a2BIUg3eeMHm\nnYhkNQKr9djAreX60qSWe5oPyp/R0VfQMsLVkMi8UIVp0RLD/QH/AafmZ3RpdJWC\nI34i7Q0EXQKShulGM7RNRlhBbxQXo9SQLMGjWaRl83rSuo6g0d1Nx252btdWKhHz\nG5IQBGxFVhwZl/LDl/sWxja/+TsRWAvRDcjpVS/acFibbyrP8iK842hfoJbYvgKl\njRDXzrbYpqMo+jY0+cMd9WGsfmEhISH1Is5HycN3yqkUsTAmSnT/1KSRnOQ6y/xs\ndvCnPRYdEjILnVbZkHPwCG8QzjzTkIWdROrjvhRHI5nn/hvvrVRlYBqusQfHNF5c\nNvcgDnpUXkDyGes7Nl3sTM4i+bhjXuTa7Dkghm2QMKbuj1/IiPDBifGg/aVKkVmh\ncd+VUeFU5CGMpsFja40HBOkCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBo2r5x6pJC4tERD+S82r8cS7IcYt\ndzlrFu21kkGusaH5p8dfvOiZVf5GI/paTBFba+YeV50EBPpKKdUbAA5ckQ==\n-----END PUBLIC KEY-----\n",
+    "label": "library.b-promptugal",
+    "fingerprint": "sha256:78fa318e01745b38",
+    "signing_fingerprint": "sha256:51b1474aae1dc589"
+   },
+   "source": "https://github.com/PrompTugal/PrompTugal__News__Library/blob/dev/team/keys.json (made with sgit pki in its session, 18 Nov 2026)"
+  }
+ ]
+}
