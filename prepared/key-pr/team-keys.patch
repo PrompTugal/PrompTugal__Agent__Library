@@ -1,0 +1,69 @@
+From f7446ace7fad4c93d02e5e01321597fc0e710966 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Thu, 26 Nov 2026 02:38:32 +0000
+Subject: [PATCH] Add cl-6.library's ssh-ed25519 signing key; supersede
+ library.b's
+
+Agent: cl-6.library@PrompTugal.dinis
+Claude-Session: https://claude.ai/code/session_016CrbJNfPpkijB4Czf4L2DD
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+---
+ team/keys.json | 25 +++++++++++++++++++++----
+ 1 file changed, 21 insertions(+), 4 deletions(-)
+
+diff --git a/team/keys.json b/team/keys.json
+index 20a91c7..50dc725 100644
+--- a/team/keys.json
++++ b/team/keys.json
+@@ -8,7 +8,7 @@
+    "role": "Lead and librarian-in-chief of library.promptugal.news (PrompTugal/PrompTugal__News__Library). A session key: it ends with its session.",
+    "how": "Made by the agent in its own session on 18 November 2026 with the installed `sgit pki keygen` (sgit-ai v0.27.0), at Dinis's word ('keys in every session'; board/guidance/2026-11-18-keys-issues-rebuilds-observability.md in PrompTugal__News__Website). The other halves stay in the session, outside this repository, locked and never committed or printed. The push of this entry is the authorisation. Not yet linked to an operator's key.",
+    "added": "2026-11-18",
+-   "status": "active",
++   "status": "superseded",
+    "fingerprint": "sha256:78fa318e01745b38",
+    "signing_fingerprint": "sha256:51b1474aae1dc589",
+    "bundle": {
+@@ -21,7 +21,9 @@
+    },
+    "session": "session_01Kw9UwFNC1sX4AKoWo4XhEP",
+    "note": "The sgit key (encryption and sgit signing). Commits are signed with the SSH key below, made in the same session, because git signs with SSH keys.",
+-   "claude_session": "https://claude.ai/code/session_01Kw9UwFNC1sX4AKoWo4XhEP"
++   "claude_session": "https://claude.ai/code/session_01Kw9UwFNC1sX4AKoWo4XhEP",
++   "superseded_by": "cl-6.library-commit-signing",
++   "superseded_note": "The library.b session ended; cl-6.library@PrompTugal.dinis took over the role on 2026-11-26."
+   },
+   {
+    "id": "library.b-commit-signing",
+@@ -31,11 +33,26 @@
+    "role": "Signs every commit library.b@ makes in this repository, as a git SSH signature. A session key: it ends with its session.",
+    "how": "Made by the agent in its own session on 19 November 2026 with ssh-keygen -t ed25519, at Dinis's word (board/guidance/2026-11-19-signed-commits-paid-search-and-free-embeds.md section 2 in PrompTugal__News__Website: 'yes that is correct', about 01:05 UTC). The other half stays in the session, outside this repository, and is never committed or printed. git is set in this clone only (gpg.ssh.program ssh-keygen) so the environment's own signer is not used.",
+    "added": "2026-11-19",
+-   "status": "active",
++   "status": "superseded",
+    "type": "ssh-ed25519",
+    "fingerprint": "SHA256:oO2xYBx1tyg1N7VSgHDxTv2cFpydt096bFvQ5sg0AuE",
+    "ssh_public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBoCL1RHbl0j0JQbF9FbZfstmlvyXg9FUMzPHoxEGoeO",
+-   "claude_session": "https://claude.ai/code/session_01Kw9UwFNC1sX4AKoWo4XhEP"
++   "claude_session": "https://claude.ai/code/session_01Kw9UwFNC1sX4AKoWo4XhEP",
++   "superseded_by": "cl-6.library-commit-signing",
++   "superseded_note": "The library.b session ended; cl-6.library@PrompTugal.dinis took over the role on 2026-11-26."
++  },
++  {
++   "id": "cl-6.library-commit-signing",
++   "agent": "cl-6.library@PrompTugal.dinis",
++   "label": "cl-6.library@PrompTugal.dinis commit signing key (Claude Code cloud session, account 6)",
++   "role": "Signs every commit cl-6.library@ makes in this repository, as a git SSH signature. A session key: it ends with its session.",
++   "how": "Made by the agent in its own session on 2026-11-26 with ssh-keygen -t ed25519. The other half stays in the session, outside every repository. Published first in its home, PrompTugal__Agent__Library site/keys/cl-6.library.json (field ssh_ed25519), as PrompTugal__Agent__Security docs/security/2026-11-26-section-repos-key-bootstrap.md asks.",
++   "added": "2026-11-26",
++   "status": "active",
++   "type": "ssh-ed25519",
++   "fingerprint": "SHA256:2oPEqy9D4Xu4DlLgcAZf5o8Sn6c18de9IR+o49ePqj4",
++   "ssh_public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICwHiS4K070JuGau6jPugPUwMIiBlJfFZlMqK+BoEtjt",
++   "claude_session": "https://claude.ai/code/session_016CrbJNfPpkijB4Czf4L2DD"
+   }
+  ]
+ }
+-- 
+2.43.0
+
