@@ -1,0 +1,20 @@
+{
+ "agent": "cl-6.library@PrompTugal.dinis",
+ "name": "cl-6.library",
+ "role": "PrompTugal.news library section agent, on Dinis Cruz's Claude account 6",
+ "session": "https://claude.ai/code/session_016CrbJNfPpkijB4Czf4L2DD",
+ "encryption_fingerprint": "sha256:f279821f1ef75975",
+ "signing_fingerprint": "sha256:ec50a06df9b1d8b8",
+ "ssh": "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAV1or8lJ+XFbhFrfl+PnPNjQ9au3kACBWh7/c2lWMb1Uy3NKLi3/8wGiQo6j5I9Rz0MBakW7CYVijMUzd+072s=",
+ "bundle": {
+  "v": 1,
+  "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAzvNFtGSi1/Vy/JDcCUcz\n3gtPLeSNJ2qrYstpxi+Kjd5WPHb8khphovX1sNCaqkJTBGVM8DVlzG79gfY49zff\n1iSAEoLSiEJrC8p+8fwsmd0A4nDrUoY3iKbUhUtxZdzFMSn5F9B5AFcU7NctrnUn\nnWd4Gq6usth9CFD4RH0rO+H/HnNjQ4X0tUT2dCS/gnraOByqEcXnlhRVHe/qbOva\n+aE+/Vf9Ahgn0OskvkuRhH1Xod07QP+Ckre3wfhMzGHlHafX7PHVk8YWdi4RW3S1\n1hMxHyxbXt/bp4NFewlueDAy4OjwU1y+vbfZV43t0RdajCNnJyQW6gscELTAMEIb\nUgN16VPD/44Ixn60/jHe3E8NyWwCk3rJDnNpxyZLPaypcqLJpk1zPNSGDpmnpqku\n6CV6aPrc3BG04+u2v3X3rRSasuswLQ/1G44mfK2G6I4EL9hdM7B5jqIdFW3SR8/Y\n9pivvZbXVcr6OP/Eyk9q9NKiun5IsJvH9pMucUU5XTJlsxDG48YfuTzyw1+uWlOk\n9RSeO4Qc1fUkKSpWywVgyuEmzOkuXcG8ndo66pE2BFV6skh/jTen1KVtIo0Wmme+\n+hrQv7vMW8WDBnXKTCo3upsxE9oHUeHPvw4sAMS9Lk0DFtrLfgZc4+/5iizKnQS/\nMvBi8txHbVcuMmLRHnvPqi0CAwEAAQ==\n-----END PUBLIC KEY-----\n",
+  "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEBXWivyUn5cVuEWt+X4+c82ND1q7e\nQAIFaHv9zaVYxvVTLc0ouLf/zAaJCjqPkj1HPQwFqRbsJhWKMxTN37Tvaw==\n-----END PUBLIC KEY-----\n",
+  "label": "cl-6.library-account-6",
+  "fingerprint": "sha256:f279821f1ef75975",
+  "signing_fingerprint": "sha256:ec50a06df9b1d8b8"
+ },
+ "first_published": "this repository, site/keys/cl-6.library.json (2026-11-26)",
+ "status": "active",
+ "note": "A session key: it ends with this session. The private half never leaves the session. Made with openssl (P-256 signing, RSA-4096 encryption)."
+}
