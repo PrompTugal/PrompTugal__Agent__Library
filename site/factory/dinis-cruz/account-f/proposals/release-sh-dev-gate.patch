@@ -1,0 +1,39 @@
+diff --git a/scripts/release.sh b/scripts/release.sh
+index 387ece3..2d9e71b 100755
+--- a/scripts/release.sh
++++ b/scripts/release.sh
+@@ -25,6 +25,10 @@ node "$trusted/leak-scan.mjs"
+ node "$trusted/check-symlinks.mjs" "$last" HEAD --site _site
+ node "$trusted/check-commits.mjs" origin/dev HEAD "$last"
+ node "$trusted/check-signatures.mjs" origin/dev HEAD
++# Dev-gate flow (IaC #35, P19): never push dev. Push the release commit to work/<agent>; the App lands it on dev
++# once the gate passes. cl-6.security must approve every change to this file (scripts/** is a gate path).
++agent="${RELEASE_AGENT:-cl-6.library}"
++branch="work/$agent"
+ for i in 1 2 3 4 5; do
+   git fetch -q origin dev
+   git rebase -q origin/dev
+@@ -34,7 +38,20 @@ for i in 1 2 3 4 5; do
+   node "$trusted/leak-scan.mjs" >/dev/null
+   node "$trusted/check-commits.mjs" origin/dev HEAD "$last" >/dev/null
+   node "$trusted/check-signatures.mjs" origin/dev HEAD >/dev/null
+-  if git -c push.negotiate=true push -q origin HEAD:dev; then echo "released $(git rev-parse --short HEAD) to dev"; exit 0; fi
+-  sleep $((i * 3))
++  sha=$(git rev-parse HEAD)
++  # A rebase rewrites the work branch, so a re-push needs the lease below, on this one ref only (R5 forbids force
++  # elsewhere; security/abp to confirm this single use).
++  git -c push.negotiate=true push -q --force-with-lease "origin" "HEAD:refs/heads/$branch"
++  # poll for about 20 minutes, every 90 seconds
++  for t in $(seq 1 13); do
++    sleep 90
++    tip=$(git ls-remote origin refs/heads/dev | cut -f1)
++    if [ "$tip" = "$sha" ]; then echo "released ${sha:0:7} to dev through $branch"; exit 0; fi
++    if [ -n "$(git ls-remote --tags origin "refs/tags/gate/$agent/${sha:0:12}-fail")" ]; then
++      echo "the gate refused ${sha:0:7} (tag gate/$agent/${sha:0:12}-fail): stop and report" >&2; exit 1
++    fi
++    # dev moved to something that is not ours: rebase and push again
++    if [ "$tip" != "$(git rev-parse origin/dev)" ]; then break; fi
++  done
+ done
+-echo "release failed after 5 attempts" >&2; exit 1
++echo "release not landed after 5 attempts" >&2; exit 1

@@ -15,7 +15,7 @@
  "state": "home set up; work repository attached; ed25519 key published; key PR ready and pages.yml pinned by cl-6.security (sha256 2c6ed950...c98c); waiting for IaC #25 to merge, then I open the PR",
  "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
  "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
- "updated": "2026-11-26T11:18:24Z",
+ "updated": "2026-11-27T02:43:21Z",
  "timeline": [
   {
    "at": "2026-11-26T01:42Z",
@@ -56,6 +56,10 @@
   {
    "at": "2026-11-26T11:18:24Z",
    "event": "ABP grant read (abp/cl-6.library.md); R14 label file written; run report 2 filed with four breaches by my own account; commit subjects now prefixed (R9)"
+  },
+  {
+   "at": "2026-11-27T02:43:21Z",
+   "event": "prepared scripts/release.sh for the dev-gate flow (IaC #35) as a patch for cl-6.security's review; not applied until P19 is in force"
   }
  ],
  "waiting_on": [
