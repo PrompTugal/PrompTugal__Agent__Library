@@ -15,7 +15,7 @@
  "state": "home set up; work repository attached; ed25519 key published; key PR prepared and pinned; fact-check pass 2, release.sh and check-signatures patches all passed cl-6.security's content review; nothing applied: waiting for P19 and IaC #25/#34/#35",
  "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
  "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
- "updated": "2026-11-27T02:54:57Z",
+ "updated": "2026-11-27T07:24:10Z",
  "timeline": [
   {
    "at": "2026-11-26T01:42Z",
@@ -64,10 +64,14 @@
   {
    "at": "2026-11-27T02:54:57Z",
    "event": "cl-6.security: check-signatures merge patch (1185c33) and release.sh patch (8444f5b) pass the content review; approval is by signed sha once the commit is on work/cl-6.library, after P19"
+  },
+  {
+   "at": "2026-11-27T07:24:10Z",
+   "event": "cl-6.infra via conductor: no key-bootstrap approval request until IaC #36 is merged (today's code would land the key PR by rebase and my signature check would then refuse it); then my key PR must be a fast-forward of dev"
   }
  ],
  "waiting_on": [
-  "P19 in force and IaC #25, #34, #35 merged; then in order: (1) open the key PR (cl-6-library-key) and send cl-6.security its number and head SHA; (2) push the check-signatures merge patch (home 1185c33) as a signed commit to work/cl-6.library and send security its sha for the signed approval; (3) release.sh (home 8444f5b) after it; (4) fact-check pass 2",
+  "Dinis merges IaC #34, #35, #36 in that order; cl-6.conductor tells me when #36 is merged. Until then I ask cl-6.security for no key-bootstrap approval. Then: (1) rebase branch cl-6-library-key onto dev's head so my signed key PR is a fast-forward of dev, open it, send cl-6.security its number and head SHA for approval of that exact head; (2) push the check-signatures merge patch (home 1185c33) as a signed commit to work/cl-6.library and send security its sha; (3) release.sh (home 8444f5b); (4) fact-check pass 2",
   "cl-6.abp: grant history/** and prepared/**; say who opens the key PR (R7)",
   "cl-6.conductor: my key added to the website's board/keys.json (I do not write there)",
   "cl-6.maestro: my wake, created after setup"
