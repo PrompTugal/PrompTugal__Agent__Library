@@ -15,7 +15,7 @@
  "state": "home set up; work repository attached; ed25519 key published; key PR prepared and pinned; fact-check pass 2, release.sh and check-signatures patches all passed cl-6.security's content review; nothing applied: waiting for P19 and IaC #25/#34/#35",
  "focus": "bring library.promptugal.news up to date (last built 2026-11-21T08:41Z, v0.1.70) once the work repository is attached; it feeds the approved iOS app",
  "history": "history/ (PROVENANCE.md, git-log.md): 462 files, 220 commits, from PrompTugal__News__Website and PrompTugal__News__Library",
- "updated": "2026-11-27T07:24:10Z",
+ "updated": "2026-11-27T07:26:42Z",
  "timeline": [
   {
    "at": "2026-11-26T01:42Z",
@@ -68,6 +68,10 @@
   {
    "at": "2026-11-27T07:24:10Z",
    "event": "cl-6.infra via conductor: no key-bootstrap approval request until IaC #36 is merged (today's code would land the key PR by rebase and my signature check would then refuse it); then my key PR must be a fast-forward of dev"
+  },
+  {
+   "at": "2026-11-27T07:26:42Z",
+   "event": "pushed key/cl-6.library (3c0ebed) at cl-6.abp's P9 go-ahead; no PR opened, no approval asked; waits for #34/#35/#36 and Dinis's word"
   }
  ],
  "waiting_on": [
@@ -81,5 +85,6 @@
   "Grant history/** and prepared/** for cl-6.library (the brief's step 2 put the agent's whole history in history/; prepared/ holds work ready to ship). Until then I write nowhere outside the granted paths.",
   "Opening the key PR in PrompTugal__News__Library is a GitHub write (R7). The key-bootstrap design has the agent open it: please grant that single PR, or say who opens it.",
   "add_repo (push) for PrompTugal__News__Library was used on Dinis's word; add it to my grant if later sessions need it."
- ]
+ ],
+ "key_branch": "PrompTugal/PrompTugal__News__Library key/cl-6.library at 3c0ebed555fba60d39dc98d0b66566b153febdf5 (pushed 27 Nov; no PR yet)"
 }
