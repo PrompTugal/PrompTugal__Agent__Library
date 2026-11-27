@@ -1,0 +1,71 @@
+diff --git a/scripts/check-signatures.mjs b/scripts/check-signatures.mjs
+index ab2633c..b2b6f44 100644
+--- a/scripts/check-signatures.mjs
++++ b/scripts/check-signatures.mjs
+@@ -9,7 +9,7 @@
+ // review): a new or rotated key is added by a commit signed with a key already listed, or a person adds it; the
+ // commits in BOOTSTRAP (each with Dinis's word or a person's hand) are read from their own tree. Only active keys count. Commits that are
+ // ancestors of BEFORE_THE_CHECK (dev's head when this check was added) are skipped: history is never rewritten; every
+-// other commit is checked, including ones on branches merged in. Merge commits fail (release.sh keeps dev linear).
++// other commit is checked, including ones on branches merged in. Merge commits are checked like any other commit, against their first parent's keys.
+ // CI commits nothing in this repository (pages.yml only pushes tags), so no commit is exempt. Only git is run.
+ // AppSec post-review, 19 Nov 2026: LIB-2026-028 to 037.
+ // The gates run this file from the last release's copy, never from the pushed tree (control 7; release.sh, pages.yml).
+@@ -43,13 +43,14 @@ if (!sha(BEFORE_THE_CHECK)) { console.error('check-signatures: BEFORE_THE_CHECK
+ const zero = /^0+$/;
+ const before = beforeArg && !zero.test(beforeArg) ? sha(beforeArg) : null;
+ const range = [...(before ? [`${before}..${after}`] : [after]), `^${BEFORE_THE_CHECK}`];
+-const merges = lines(git('rev-list', '--merges', ...range));
+-const added = lines(git('rev-list', '--no-merges', ...range));
++// every commit in the range, merges included: a merge is checked like any other commit, against the keys in its FIRST parent's
++// team/keys.json (c^ is the first parent), and every commit it brings in is in the range too (cl-6.security ruling, 27 Nov 2026,
++// for the dev-gate flow: no force, a signed merge of origin/dev into the work branch).
++const added = lines(git('rev-list', ...range));
+ 
+ const dir = mkdtempSync(join(tmpdir(), 'check-signatures-'));
+ const problems = [];
+ let checked = 0;
+-for (const m of merges) problems.push(`${m.slice(0, 7)}: a merge commit (dev is kept linear: rebase instead)`);
+ try {
+   for (const c of added) {
+     const short = c.slice(0, 7);
+diff --git a/scripts/test-check-signatures.mjs b/scripts/test-check-signatures.mjs
+index d254814..72f5caf 100644
+--- a/scripts/test-check-signatures.mjs
++++ b/scripts/test-check-signatures.mjs
+@@ -52,7 +52,8 @@ try {
+   // the first commit publishes the test key; it is outside every tested range (as a person's commit would be)
+   git('add', '-A'); git('commit', '-q', '-m', 'test: publish the test key' + trailers());
+   const base = git('rev-parse', 'HEAD');
+-  const commit = (msg, opts = []) => { writeFileSync(join(repo, 'test.txt'), randomBytes(8).toString('hex')); git('add', '-A'); git(...opts, 'commit', '-q', '-m', msg); };
++  const commitIn = (file, msg, opts = []) => { writeFileSync(join(repo, file), randomBytes(8).toString('hex')); git('add', '-A'); git(...opts, 'commit', '-q', '-m', msg); };
++  const commit = (msg, opts = []) => commitIn('test.txt', msg, opts);
+   const cases = [
+     ['a good commit passes', () => commit('good' + trailers()), true, 'OK (1 commits checked'],
+     ['an unsigned commit fails', () => commit('unsigned' + trailers(), ['-c', 'commit.gpgsign=false']), false, 'signature missing'],
+@@ -67,10 +68,22 @@ try {
+       k.keys.push({ id: 'self', agent: 'self.b@PrompTugal.dinis', session: SESSION.split('/').pop(), claude_session: SESSION, status: 'active', type: 'ssh-ed25519', ssh_public_key: other.line });
+       writeFileSync(keysFile, JSON.stringify(k, null, 1) + '\n'); commit('self' + trailers('self.b@PrompTugal.dinis'), ['-c', `user.signingkey=${other.file}`]);
+     }, false, "in its parent's team/keys.json"],
+-    ['a merge commit fails', () => {
+-      git('checkout', '-q', '-b', 'side'); commit('side' + trailers()); git('checkout', '-q', '-');
++    // dev-gate flow (cl-6.security ruling, 27 Nov 2026): a merge is checked like any other commit
++    ['a signed merge passes', () => {
++      git('checkout', '-q', '-b', 'side'); commitIn('side.txt', 'side' + trailers()); git('checkout', '-q', '-');
++      commit('main-side' + trailers());
+       git('merge', '-q', '--no-ff', '-m', 'merge' + trailers(), 'side');
+-    }, false, 'a merge commit'],
++    }, true, 'OK (3 commits checked'],
++    ['an unsigned merge fails', () => {
++      git('checkout', '-q', '-b', 'side'); commitIn('side.txt', 'side' + trailers()); git('checkout', '-q', '-');
++      commit('main-side' + trailers());
++      git('-c', 'commit.gpgsign=false', 'merge', '-q', '--no-ff', '-m', 'merge' + trailers(), 'side');
++    }, false, 'signature missing'],
++    ['a signed merge that brings in an unsigned commit fails', () => {
++      git('checkout', '-q', '-b', 'side'); commitIn('side.txt', 'side' + trailers(), ['-c', 'commit.gpgsign=false']); git('checkout', '-q', '-');
++      commit('main-side' + trailers());
++      git('merge', '-q', '--no-ff', '-m', 'merge' + trailers(), 'side');
++    }, false, 'signature missing'],
+     // security@'s fourth ruling: an unsigned commit from a dropped run (between the anchor and BEFORE) still fails
+     ['an unsigned commit from a dropped run fails', () => { commit('dropped' + trailers(), ['-c', 'commit.gpgsign=false']); commit('later' + trailers()); }, false, 'signature missing'],
+     // control 6 (conductor.b@, 19 Nov 2026 14:01 UTC, from videos.b@'s pre-review): an orphan would trust its own keys
