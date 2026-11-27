@@ -1,28 +1,31 @@
 diff --git a/scripts/release.sh b/scripts/release.sh
-index 387ece3..2d9e71b 100755
+index 387ece3..22e2578 100755
 --- a/scripts/release.sh
 +++ b/scripts/release.sh
-@@ -25,6 +25,10 @@ node "$trusted/leak-scan.mjs"
+@@ -25,6 +25,12 @@ node "$trusted/leak-scan.mjs"
  node "$trusted/check-symlinks.mjs" "$last" HEAD --site _site
  node "$trusted/check-commits.mjs" origin/dev HEAD "$last"
  node "$trusted/check-signatures.mjs" origin/dev HEAD
 +# Dev-gate flow (IaC #35, P19): never push dev. Push the release commit to work/<agent>; the App lands it on dev
 +# once the gate passes. cl-6.security must approve every change to this file (scripts/** is a gate path).
-+agent="${RELEASE_AGENT:-cl-6.library}"
++agent="cl-6.library"   # hard-coded, never from the environment (cl-6.security ruling)
 +branch="work/$agent"
++# the sha this script last pushed to the work branch; the lease below names it. On the first round it is what the remote holds now (empty if the branch does not exist).
++last_pushed=$(git ls-remote origin "refs/heads/$branch" | cut -f1)
  for i in 1 2 3 4 5; do
    git fetch -q origin dev
    git rebase -q origin/dev
-@@ -34,7 +38,20 @@ for i in 1 2 3 4 5; do
+@@ -34,7 +40,21 @@ for i in 1 2 3 4 5; do
    node "$trusted/leak-scan.mjs" >/dev/null
    node "$trusted/check-commits.mjs" origin/dev HEAD "$last" >/dev/null
    node "$trusted/check-signatures.mjs" origin/dev HEAD >/dev/null
 -  if git -c push.negotiate=true push -q origin HEAD:dev; then echo "released $(git rev-parse --short HEAD) to dev"; exit 0; fi
 -  sleep $((i * 3))
 +  sha=$(git rev-parse HEAD)
-+  # A rebase rewrites the work branch, so a re-push needs the lease below, on this one ref only (R5 forbids force
-+  # elsewhere; security/abp to confirm this single use).
-+  git -c push.negotiate=true push -q --force-with-lease "origin" "HEAD:refs/heads/$branch"
++  # A rebase rewrites the work branch, so a re-push needs a lease that names the exact sha last pushed there, on this one ref only
++  # (cl-6.security ruling: never plain -f or --force, never a bare lease, never another ref).
++  git -c push.negotiate=true push -q --force-with-lease="refs/heads/$branch:$last_pushed" origin "HEAD:refs/heads/$branch"
++  last_pushed="$sha"
 +  # poll for about 20 minutes, every 90 seconds
 +  for t in $(seq 1 13); do
 +    sleep 90
